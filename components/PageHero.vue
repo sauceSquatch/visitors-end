@@ -4,7 +4,10 @@
     :style="`background-image: url(${heroImage})`"
   >
     <div class="hero-content">
-      <h1 v-html="heroHeadline" />
+      <h1
+        class="cash-grain--heading-one"
+        v-html="heroHeadline"
+      />
       <p class="hero-p">
         {{ heroParagraph }}
       </p>
@@ -46,12 +49,6 @@ export default {
     .hero-content {
       padding: 80px;
 
-      h1 {
-        font-family: 'Stardos Stencil', sans-serif;
-        font-size: 72px;
-        line-height: 70px;
-        margin: 0;
-      }
       .hero-p {
         font-size: 20px;
         line-height: 31px;
