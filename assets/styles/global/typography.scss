@@ -1,16 +1,47 @@
-// .global--heading-one {
-//   font-size: 44px;
-//   letter-spacing: -.01em;
-//   line-height: 1.2;
-//   margin: 0;
-//   font-weight: 200;
-//   @media (min-width: $break-sm) {
-//     font-size: 72px;
-//   }
-//   @media (min-width: $break-md) {
-//     font-size: 88px;
-//   }
-// }
+.cash-grain--heading-one {
+  font-family: 'Stardos Stencil', sans-serif;
+  font-size: 46px;
+  line-height: 1;
+  margin: 0;
+  @media (min-width: $break-sm) {
+    font-size: 72px;
+  }
+  @media (min-width: $break-md) {
+    font-size: 88px;
+  }
+}
+
+.cash-grain--heading-two {
+  font-family: 'Stardos Stencil', sans-serif;
+  font-size: 32px;
+  line-height: 1;
+  margin: 0;
+  @media (min-width: $break-sm) {
+    font-size: 40px;
+  }
+  @media (min-width: $break-md) {
+    font-size: 48px;
+  }
+}
+
+.cash-grain--heading-label {
+  font-family: 'Stardos Stencil', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  margin: 0;
+  @media (min-width: $break-sm) {
+    font-size: 18px;
+  }
+}
+
+.cash-grain--photo-desc {
+  font-size: 11px;
+  line-height: 1;
+  margin: 0;
+  @media (min-width: $break-sm) {
+    font-size: 12px;
+  }
+}
 
 // .global--heading-two {
 //   font-size: 30px;
