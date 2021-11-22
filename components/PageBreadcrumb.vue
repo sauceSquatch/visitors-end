@@ -31,11 +31,11 @@ export default {
 
   .page-breadcrumb {
     width: 100vw;
-    padding: 8px 80px;
     background: $color--brand-blue-light;
     .breadcrumb-content {
       display: flex;
       align-items: center;
+      padding: 8px 80px;
 
       h2, h3 {
         font-family: 'Stardos Stencil', sans-serif;
