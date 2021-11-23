@@ -15,6 +15,7 @@
         <p class="cash-grain-chapter-description">{{ chapterDescription }}</p>
       </div>
       <div class="photo-descrtiption-container">
+        <img src="~/assets/images/cash_grain/dottedArrow-left.svg" alt="arrow pointing at image" >
         <div class="photo-label">
           {{ chapterPhotoLabel }}
         </div>
@@ -100,6 +101,9 @@ export default {
       font-size: 16px;
       line-height: 1;
       margin: 0;
+      border-bottom: 3px solid $color--brand-blue-light;
+      display: inline-block;
+      margin-bottom: 20px;
       @media (min-width: $break-sm) {
         font-size: 18px;
       }
