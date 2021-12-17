@@ -76,6 +76,10 @@ export default {
 
   .cash-grain-chapter {
 
+    .chapter-image {
+      width: 100%;
+    }
+
     .cash-grain-chapter-title {
       h2 {
         font-family: 'Stardos Stencil', sans-serif;
@@ -111,11 +115,22 @@ export default {
 
     .cash-grain-chapter-photo-lockup {
       display: flex;
+      flex-direction: column;
+
+      @media (min-width: $break-md) {
+        flex-direction: row;
+      }
 
       .photo-descrtiption-container {
-        padding: 26px 16px;
+        padding: 20px 0px;
         font-size: 12px;
         line-height: 20px;
+        max-width: 400px;
+
+        @media (min-width: $break-md) {
+          padding: 26px 16px;
+          max-width: 30%;
+        }
       }
 
       .photo-description {
@@ -127,6 +142,7 @@ export default {
       font-size: 14px;
       line-height: 25px;
       font-weight: 800;
+      max-width: 600px;
     }
 
   }

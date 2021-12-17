@@ -17,7 +17,7 @@
         chapterDescription="The Argentine national team was disparate group over-seas players and local legends. A chain-smoking, left-wing intellectual is picked to manage the team."
       />
       <CashGrainLink
-        chapterLink="/"
+        chapterLink="cash-grain-chapter-1"
         chapterLinkCTA="LEARN MORE"
       />
 
@@ -93,7 +93,4 @@ export default {
 </script>
 
 <style>
-  .chapters-container {
-    padding: 80px;
-  }
 </style>
