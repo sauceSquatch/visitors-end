@@ -1,27 +1,25 @@
 <template>
   <div class="cash-grain-chapter">
-    <div class="cash-grain-heading-label">
-      {{ chapterLabel }}
-    </div>
-    <div class="cash-grain-chapter-title">
-      <h2 v-html="chapterTitle"/>
-    </div>
-    <div class="chapter-head-divider">
-      <img class="stripped-underline" src="~/assets/images/cash_grain/stripeunderline.png">
-    </div>
+    <CashGrainChapterTitle
+      :chapterLabel="chapterLabel"
+      :chapterTitle="chapterTitle"
+    />
     <div class="cash-grain-chapter-photo-lockup">
       <div class="chapter-story">
         <img class="chapter-image" :src="chapterPhoto" :alt="chapterPhotoLabel">
-        <p class="cash-grain-chapter-description">{{ chapterDescription }}</p>
+        <p class="cash-grain-chapter-description">
+          {{ chapterDescription }}
+        </p>
       </div>
       <div class="photo-descrtiption-container">
-        <img src="~/assets/images/cash_grain/dottedArrow-left.svg" alt="arrow pointing at image" >
+        <img src="~/assets/images/cash_grain/dottedArrow-left.svg" alt="arrow pointing at image" class="photo-arrow-left">
+        <img src="~/assets/images/cash_grain/dottedArrow-up.svg" alt="arrow pointing at image" class="photo-arrow-up">
         <div class="photo-label">
           {{ chapterPhotoLabel }}
         </div>
         <div
-          class="photo-title"
           v-if="chapterPhotoTitle"
+          class="photo-title"
         >
           {{ chapterPhotoTitle }}
         </div>
@@ -80,39 +78,6 @@ export default {
       width: 100%;
     }
 
-    .cash-grain-chapter-title {
-      h2 {
-        font-family: 'Stardos Stencil', sans-serif;
-        font-size: 32px;
-        line-height: 1;
-        margin: 0;
-        @media (min-width: $break-sm) {
-          font-size: 40px;
-        }
-        @media (min-width: $break-md) {
-          font-size: 48px;
-        }
-      }
-    }
-
-    .chapter-head-divider {
-      margin-bottom: 25px;
-    }
-
-    .cash-grain-heading-label {
-      font-family: 'Stardos Stencil', sans-serif;
-      font-weight: 800;
-      font-size: 16px;
-      line-height: 1;
-      margin: 0;
-      border-bottom: 3px solid $color--brand-blue-light;
-      display: inline-block;
-      margin-bottom: 20px;
-      @media (min-width: $break-sm) {
-        font-size: 18px;
-      }
-    }
-
     .cash-grain-chapter-photo-lockup {
       display: flex;
       flex-direction: column;
@@ -130,6 +95,19 @@ export default {
         @media (min-width: $break-md) {
           padding: 26px 16px;
           max-width: 30%;
+        }
+      }
+
+      .photo-arrow-up {
+        display: block;
+        @media (min-width: $break-md) {
+          display: none;
+        }
+      }
+      .photo-arrow-left {
+        display: none;
+        @media (min-width: $break-md) {
+          display: block;
         }
       }
 

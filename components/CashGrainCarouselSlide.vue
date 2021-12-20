@@ -1,24 +1,19 @@
 <template>
   <div class="cash-grain-carousel-slide">
-    <div class="cash-grain-slide-photo-lockup">
-      <div class="slide-story">
-        <img class="slide-image" :src="slidePhoto" :alt="slidePhotoLabel">
-        <p class="cash-grain-slide-description">{{ slideDescription }}</p>
+    <img class="slide-image" :src="slidePhoto" :alt="slidePhotoLabel">
+    <div class="slide-photo-descrtiption-container">
+      <img src="~/assets/images/cash_grain/dottedArrow-up.svg" alt="arrow pointing at image">
+      <div class="photo-label">
+        {{ slidePhotoLabel }}
       </div>
-      <div class="photo-descrtiption-container">
-        <img src="~/assets/images/cash_grain/dottedArrow-left.svg" alt="arrow pointing at image" >
-        <div class="photo-label">
-          {{ slidePhotoLabel }}
-        </div>
-        <div
-          class="photo-title"
-          v-if="slidePhotoTitle"
-        >
-          {{ slidePhotoTitle }}
-        </div>
-        <div class="photo-description">
-          {{ slidePhotoDescription }}
-        </div>
+      <div
+        v-if="slidePhotoTitle"
+        class="photo-title"
+      >
+        {{ slidePhotoTitle }}
+      </div>
+      <div class="photo-description">
+        {{ slidePhotoDescription }}
       </div>
     </div>
   </div>
@@ -42,10 +37,6 @@ export default {
     slidePhotoDescription: {
       type: String,
       required: false,
-    },
-    slideDescription: {
-      type: String,
-      required: true,
     },
   },
   mounted() {
@@ -77,18 +68,16 @@ export default {
       }
     }
 
-    .cash-grain-slide-photo-lockup {
-      display: flex;
 
-      .photo-descrtiption-container {
-        padding: 26px 16px;
-        font-size: 12px;
-        line-height: 20px;
-      }
+    .slide-photo-descrtiption-container {
+      padding: 26px 0;
+      font-size: 12px;
+      line-height: 20px;
+      max-width: 460px;
+    }
 
-      .photo-description {
-        color: $color--brand-blue-light;
-      }
+    .photo-description {
+      color: $color--brand-blue-light;
     }
 
     .cash-grain-slide-description {

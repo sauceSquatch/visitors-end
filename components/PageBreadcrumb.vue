@@ -30,12 +30,31 @@ export default {
 <style lang="scss" scoped>
 
   .page-breadcrumb {
-    width: 100vw;
+    width: 100%;
     background: $color--brand-blue-light;
     .breadcrumb-content {
       display: flex;
       align-items: center;
-      padding: 8px 80px;
+      padding: 8px 5%;
+
+
+      @media (min-width: $break-md) {
+        padding: 8px 0;
+        width: 700px;
+        margin: 0 auto;
+      }
+      @media (min-width: $break-lg) {
+        width: 940px;
+        margin: 0 auto;
+      }
+      @media (min-width: $break-xl) {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      @media (min-width: $break-max) {
+        width: 1600px;
+        margin: 0 auto;
+      }
 
       h2, h3 {
         font-family: 'Stardos Stencil', sans-serif;
