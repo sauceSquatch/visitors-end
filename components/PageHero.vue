@@ -47,27 +47,7 @@ export default {
     display: flex;
     align-items: center;
     .hero-content {
-      width: 90%;
-      padding: 5%;
-
-
-      @media (min-width: $break-md) {
-        padding: 0;
-        width: 700px;
-        margin: 0 auto;
-      }
-      @media (min-width: $break-lg) {
-        width: 940px;
-        margin: 0 auto;
-      }
-      @media (min-width: $break-xl) {
-        width: 1200px;
-        margin: 0 auto;
-      }
-      @media (min-width: $break-max) {
-        width: 1600px;
-        margin: 0 auto;
-      }
+      @include global-container;
 
       .hero-p {
         font-size: 20px;

@@ -47,9 +47,9 @@ export default {
   ],
 
   styleResources: {
-    scss: ['./assets/styles/shared/variables/_index.scss'],
+    scss: ['./assets/styles/shared/_index.scss'],
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
 }

@@ -99,10 +99,6 @@
           chapterPhotoDescription="Flyers papered on walls around Paris took the official logo of the World Cup, a pair of stylized upraised arms framing a soccer ball, and added grim-looking barbed wire."
           chapterDescription="In late 1977, a group of French journalists and intellectuals formed the Organizing Committee for the Boycott of the Argentina World Cup, known for its French acronym, COBA.<br><br>They planned an organized campaign designed to persuade the French national team, led by the curly-haired goal scorer Michel Platini, to skip the tournament altogether."
         />
-        <CashGrainLink
-          chapterLink="/"
-          chapterLinkCTA="LEARN MORE"
-        />
       </div>
     </div>
   </main>
@@ -160,27 +156,8 @@ export default {
 
 <style lang="scss">
   .chapters-container {
-    width: 90%;
-    padding: 5%;
+    @include global-container;
 
-
-    @media (min-width: $break-md) {
-      padding: 0;
-      width: 700px;
-      margin: 0 auto;
-    }
-    @media (min-width: $break-lg) {
-      width: 940px;
-      margin: 0 auto;
-    }
-    @media (min-width: $break-xl) {
-      width: 1200px;
-      margin: 0 auto;
-    }
-    @media (min-width: $break-max) {
-      width: 1600px;
-      margin: 0 auto;
-    }
     .slick-dots li button::before {
       color: $color--brand-white;
       border-radius: 50%;
