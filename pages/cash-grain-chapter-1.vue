@@ -2,7 +2,7 @@
   <main>
     <PageHero
       heroHeadline="FROM HOST<br>TO JUNTA"
-      heroImage="images/cash_grain/chapter1_hero.jpg"
+      heroImage="chapter1_hero"
       heroParagraph="Before a ball was kicked, domestic politics, the repression of civilians and the military junta’s ambitions cast a long shadow over the 1978 World Cup"
     />
     <PageBreadcrumb pageName="CHAPTER 1, FROM HOST TO JUNTA: 1-6" />
@@ -166,5 +166,6 @@ export default {
   }
   .chapter {
     padding: 25px 0 30px;
+    @include global-margin-bottom;
   }
 </style>

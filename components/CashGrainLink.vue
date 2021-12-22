@@ -7,7 +7,8 @@
       <div class="arrow-container">
         <img
           class="dotted-arrow"
-          src="images/cash_grain/dottedArrow-right.svg">
+          src="images/cash_grain/dottedArrow-right.svg"
+        >
       </div>
       {{ chapterLinkCTA }}
     </NuxtLink>
@@ -52,12 +53,16 @@ export default {
       display: flex;
       align-items: center;
       text-decoration: none;
+
+      &:visited {
+        color: $color--brand-white;
+      }
     }
 
-    a &:visited, a &:-webkit-any-link,
-    .nuxt-link-exact-active, .nuxt-link-active {
-      color: $color--brand-white;
-    }
+    // a &:visited, a &:-webkit-any-link,
+    // .nuxt-link-exact-active, .nuxt-link-active {
+    //   color: $color--brand-white;
+    // }
 
 
     .arrow-container {
