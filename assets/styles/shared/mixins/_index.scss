@@ -1,6 +1,6 @@
 @mixin global-container {
-    width: 90%;
-    padding: 5%;
+    width: 80%;
+    padding: 10%;
 
 
     @media (min-width: $break-md) {
@@ -19,5 +19,15 @@
     @media (min-width: $break-max) {
       width: 1600px;
       margin: 0 auto;
+    }
+}
+
+@mixin global-margin-bottom {
+    margin-bottom: 20px;
+    @media (min-width: $break-md) {
+      margin-bottom: 40px;
+    }
+    @media (min-width: $break-lg) {
+      margin-bottom: 60px;
     }
 }

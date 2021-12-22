@@ -100,5 +100,6 @@ export default {
 
   .chapter {
     padding: 25px 0 30px;
+    @include global-margin-bottom;
   }
 </style>
