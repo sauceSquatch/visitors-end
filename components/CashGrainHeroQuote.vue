@@ -57,7 +57,10 @@ export default {
 
   .cash-grain-hero-quote {
     background: url("~/assets/images/cash_grain/quote_bg_m.png");
-    background-size: cover;
+    @media (min-width: $break-md) {
+      padding: 40px 0;
+    }
+
 
     .global-container {
       @include global-container;

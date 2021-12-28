@@ -32,6 +32,10 @@ export default {
   .page-breadcrumb {
     width: 100%;
     background: $color--brand-blue-light;
+    display: none;
+    @media (min-width: $break-md) {
+      display: block;
+    }
 
     .breadcrumb-content {
       display: flex;
