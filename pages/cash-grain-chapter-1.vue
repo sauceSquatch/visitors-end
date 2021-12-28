@@ -6,6 +6,13 @@
       heroParagraph="Before a ball was kicked, domestic politics, the repression of civilians and the military junta’s ambitions cast a long shadow over the 1978 World Cup"
     />
     <PageBreadcrumb pageName="CHAPTER 1, FROM HOST TO JUNTA: 1-6" />
+    <CashGrainHeroQuote
+      profilePic="/images/cash_grain/chapter1/ch01_quote_pic.png"
+      profileName="Emilio Eduardo Massera"
+      profileBio="(19 October 1925 – 8 November 2010) Argentine Naval military officer, and a leading participant in the Argentine coup d’état of 1976."
+      quote="“Holding the tournament will show the world that Argentina is a trustworthy country, capable of carrying out huge projects; and will help push back against the criticism that is raining on us from around the world”"
+      quoteName="Admiral Emilio Massera"
+    />
     <div class="chapters-container">
       <div class="chapter">
         <CashGrainChapter

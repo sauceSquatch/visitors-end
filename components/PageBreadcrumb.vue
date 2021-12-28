@@ -33,8 +33,6 @@ export default {
     width: 100%;
     background: $color--brand-blue-light;
 
-    @include global-margin-bottom;
-
     .breadcrumb-content {
       display: flex;
       align-items: center;
