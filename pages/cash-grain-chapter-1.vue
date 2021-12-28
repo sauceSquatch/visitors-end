@@ -1,18 +1,26 @@
 <template>
   <main>
     <PageHero
+      chapterLabel="chapter 1"
       heroHeadline="FROM HOST<br>TO JUNTA"
       heroImage="chapter1_hero"
       heroParagraph="Before a ball was kicked, domestic politics, the repression of civilians and the military junta’s ambitions cast a long shadow over the 1978 World Cup"
     />
     <PageBreadcrumb pageName="CHAPTER 1, FROM HOST TO JUNTA: 1-6" />
+    <CashGrainHeroQuote
+      profilePic="/images/cash_grain/chapter1/ch01_quote_pic.png"
+      profileName="Emilio Eduardo Massera"
+      profileBio="(19 October 1925 – 8 November 2010) Argentine Naval military officer, and a leading participant in the Argentine coup d’état of 1976."
+      quote="“Holding the tournament will show the world that <span class='highlight'>Argentina is a trustworthy country</span>, capable of carrying out huge projects; and will help push back against the criticism that is raining on us from around the world”"
+      quoteName="Admiral Emilio Massera"
+    />
     <div class="chapters-container">
       <div class="chapter">
         <CashGrainChapter
           chapterLabel="01/06"
           chapterTitle="ARGENTINA YOU GET<br>TO HOST A WORLD CUP!"
           chapterPhoto="/images/cash_grain/chapter1/01_06.jpg"
-          chapterPhotoLabel="IMAGE:"
+          chapterPhotoLabel="NOTE:"
           chapterPhotoDescription="Argentina was officially chosen as the host nation by FIFA on July 6, 1966 in London, England. Mexico withdrew from the bidding process after having been awarded the 1970 competition two years earlier."
           chapterDescription="In 1964, at FIFA’s Tokyo congress, Argentina was awarded the hosting rights to the 1978 World Cup. To host the football tournament was the highest honor in all of sports."
         />

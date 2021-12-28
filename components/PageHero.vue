@@ -1,6 +1,9 @@
 <template>
   <div class="page-hero">
     <div class="hero-content">
+      <div class="cash-grain--heading-label">
+        {{ chapterLabel }}
+      </div>
       <h1
         class="cash-grain--heading-one"
         v-html="heroHeadline"
@@ -9,6 +12,7 @@
         {{ heroParagraph }}
       </p>
     </div>
+    <img class="vertical-mark" src="~/assets/images/cash_grain/stripe_vertical.png" alt="">
     <div class="page-hero-backgrounds">
       <div
         class="hero-bg-mobile"
@@ -25,6 +29,10 @@
 <script>
 export default {
   props: {
+    chapterLabel: {
+      type: String,
+      required: true,
+    },
     heroHeadline: {
       type: String,
       required: true,
@@ -50,11 +58,18 @@ export default {
     display: flex;
     align-items: center;
     width: 100%;
-    height: 80vh;
+    height: 100vh;
     position: relative;
     overflow: hidden;
     @media (min-width: $break-md) {
       height: 750px; //desktop
+    }
+
+    .cash-grain--heading-label {
+      background-color: $color--brand-blue-light;
+      display: inline-block;
+      padding: 3px 6px;
+      margin-bottom: 12px;
     }
 
     .page-hero-backgrounds {
@@ -62,6 +77,20 @@ export default {
       height: 100%;
       width: 100%;
       z-index: -1;
+    }
+
+    .vertical-mark {
+      position: absolute;
+      top: 280px;
+      width: 31px;
+      height: 413px;
+      left: -10px;
+      @media (min-width: $break-md) {
+        top: 160px;
+        width: 68px;
+        height: 902px;
+        left: -36px;
+      }
     }
 
     .hero-bg-mobile {
@@ -87,7 +116,7 @@ export default {
     .hero-content {
       @include global-container;
 
-      margin-top: 330px;
+      margin-top: 60vh;
       @media (min-width: $break-md) {
         margin-top: 0;
       }
