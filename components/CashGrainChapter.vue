@@ -1,30 +1,37 @@
 <template>
   <div class="cash-grain-chapter">
-    <CashGrainChapterTitle
-      :chapterLabel="chapterLabel"
-      :chapterTitle="chapterTitle"
-    />
-    <div class="cash-grain-chapter-photo-lockup">
-      <div class="chapter-story">
-        <img class="chapter-image" :src="chapterPhoto" :alt="chapterPhotoLabel">
-        <p class="cash-grain-chapter-description">
-          {{ chapterDescription }}
-        </p>
-      </div>
-      <div class="photo-descrtiption-container">
-        <img src="~/assets/images/cash_grain/dottedArrow-left.svg" alt="arrow pointing at image" class="photo-arrow-left">
-        <img src="~/assets/images/cash_grain/dottedArrow-up.svg" alt="arrow pointing at image" class="photo-arrow-up">
-        <div class="photo-label">
-          {{ chapterPhotoLabel }}
+    <div
+      class="cash-grain-chapter-title-container"
+      :style="`background-image: url(${chapterPhoto}`"
+    >
+      <CashGrainChapterTitle
+        :chapterLabel="chapterLabel"
+        :chapterTitle="chapterTitle"
+      />
+    </div>
+    <div class="cash-grain-chapter-content-container">
+      <div class="cash-grain-chapter-photo-lockup">
+        <div class="chapter-story">
+          <img class="chapter-image desktop" :src="chapterPhoto" :alt="chapterPhotoLabel">
+          <p class="cash-grain-chapter-description">
+            {{ chapterDescription }}
+          </p>
         </div>
-        <div
-          v-if="chapterPhotoTitle"
-          class="photo-title"
-        >
-          {{ chapterPhotoTitle }}
-        </div>
-        <div class="photo-description">
-          {{ chapterPhotoDescription }}
+        <div class="photo-descrtiption-container">
+          <img src="~/assets/images/cash_grain/dottedArrow-left.svg" alt="arrow pointing at image" class="photo-arrow-left">
+          <img src="~/assets/images/cash_grain/dottedArrow-up.svg" alt="arrow pointing at image" class="photo-arrow-up">
+          <div class="photo-label">
+            {{ chapterPhotoLabel }}
+          </div>
+          <div
+            v-if="chapterPhotoTitle"
+            class="photo-title"
+          >
+            {{ chapterPhotoTitle }}
+          </div>
+          <div class="photo-description">
+            {{ chapterPhotoDescription }}
+          </div>
         </div>
       </div>
     </div>
@@ -73,6 +80,20 @@ export default {
 
 
   .cash-grain-chapter {
+    .cash-grain-chapter-title-container {
+      @include global_container;
+      background-size: cover;
+      height: calc(100vw * 0.56);
+      margin-bottom: 20px;
+      @media (min-width: $break-md) {
+        background-image: none !important;
+        height: auto;
+        margin-bottom: 0;
+      }
+    }
+    .cash-grain-chapter-content-container {
+      @include global_container;
+    }
 
     .chapter-image {
       width: 100%;

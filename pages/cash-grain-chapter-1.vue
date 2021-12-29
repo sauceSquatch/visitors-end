@@ -24,10 +24,12 @@
           chapterPhotoDescription="Argentina was officially chosen as the host nation by FIFA on July 6, 1966 in London, England. Mexico withdrew from the bidding process after having been awarded the 1970 competition two years earlier."
           chapterDescription="In 1964, at FIFA’s Tokyo congress, Argentina was awarded the hosting rights to the 1978 World Cup. To host the football tournament was the highest honor in all of sports."
         />
-        <CashGrainLink
-          chapterLink="/"
-          chapterLinkCTA="LEARN MORE"
-        />
+        <div class="chapter-links">
+          <CashGrainLink
+            chapterLink="/"
+            chapterLinkCTA="LEARN MORE"
+          />
+        </div>
       </div>
       <div class="chapter">
         <CashGrainChapter
@@ -38,12 +40,14 @@
           chapterPhotoDescription="Argentina was officially chosen as the host nation by FIFA on July 6, 1966 in London, England. Mexico withdrew from the bidding process after having been awarded the 1970 competition two years earlier."
           chapterDescription="In 1964, at FIFA’s Tokyo congress, Argentina was awarded the hosting rights to the 1978 World Cup. To host the football tournament was the highest honor in all of sports."
         />
-        <CashGrainLink
-          chapterLink="/"
-          chapterLinkCTA="LEARN MORE"
-        />
+        <div class="chapter-links">
+          <CashGrainLink
+            chapterLink="/"
+            chapterLinkCTA="LEARN MORE"
+          />
+        </div>
       </div>
-      <div class="chapter">
+      <div class="chapter chapter-carousel">
         <CashGrainChapterTitle
           chapterLabel="03/06"
           chapterTitle="THE MILITARY<br>JUNTA LEADERS"
@@ -77,10 +81,12 @@
               slidePhotoLabel="Jorge Rafael Videla"
               slidePhotoDescription="(August 2, 1925–May 17, 2013) was a General Commander of the Army, member of the military junta, and dictator of Argentina from 1976 to 1981. On December 22, 2010, Videla was sentenced to life in a civilian prison for the deaths of 31 prisoners following his coup."
             />
-            <CashGrainLink
-              chapterLink="/"
-              chapterLinkCTA="Learn More About Jorge Rafael Videla"
-            />
+            <div class="chapter-links">
+              <CashGrainLink
+                chapterLink="/"
+                chapterLinkCTA="Learn More About Jorge Rafael Videla"
+              />
+            </div>
           </div>
         </VueSlickCarousel>
       </div>
@@ -93,10 +99,12 @@
           chapterPhotoDescription="Collections of photos from families whose children and grandchildren had disappeared. Human rights organizations estimate that over 30,000 people were disappeared."
           chapterDescription="The Junta declared a so-called “Dirty War” against this enemy from within. The full extent of the atrocities committed between 1976 and 1983 is not certain.<br><br>The figure generally quoted, however, is that an estimated 30,000 people were “disappeared,” with many others illegally imprisoned or going into exile."
         />
-        <CashGrainLink
-          chapterLink="/"
-          chapterLinkCTA="LEARN About The Dirty War"
-        />
+        <div class="chapter-links">
+          <CashGrainLink
+            chapterLink="/"
+            chapterLinkCTA="LEARN About The Dirty War"
+          />
+        </div>
       </div>
       <div class="chapter">
         <CashGrainChapter
@@ -164,16 +172,14 @@ export default {
 
 <style lang="scss">
   .chapters-container {
-    @include global-container;
 
     .slick-dots li button::before {
       color: $color--brand-white;
       border-radius: 50%;
       font-size: 16px;
     }
-  }
-  .chapter {
-    padding: 25px 0 30px;
-    @include global-margin-bottom;
+    .chapter-carousel {
+      @include global_container;
+    }
   }
 </style>

@@ -94,12 +94,24 @@ export default {
 </script>
 
 <style lang="scss">
-  .chapters-container {
-      @include global-container;
+
+  .mobile {
+    @media (min-width: $break-md) {
+      display: none;
+    }
+  }
+  .desktop {
+    display: none;
+    @media (min-width: $break-md) {
+      display: block;
+    }
   }
 
   .chapter {
     padding: 25px 0 30px;
     @include global-margin-bottom;
+  }
+  .chapter-links {
+    @include global_container;
   }
 </style>
