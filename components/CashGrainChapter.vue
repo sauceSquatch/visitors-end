@@ -83,12 +83,14 @@ export default {
     .cash-grain-chapter-title-container {
       @include global_container;
       background-size: cover;
-      height: calc(100vw * 0.56);
+      height: calc(100vw * 0.65);
       margin-bottom: 20px;
+      padding-top: 10px;
       @media (min-width: $break-md) {
         background-image: none !important;
         height: auto;
         margin-bottom: 0;
+        padding: 0;
       }
     }
     .cash-grain-chapter-content-container {

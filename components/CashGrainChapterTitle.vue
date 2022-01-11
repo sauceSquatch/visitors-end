@@ -30,11 +30,11 @@ export default {
     .cash-grain-chapter-title {
       h2 {
         font-family: 'Stardos Stencil', sans-serif;
-        font-size: 32px;
+        font-size: 18px;
         line-height: 1;
         margin: 0;
         @media (min-width: $break-sm) {
-          font-size: 40px;
+          font-size: 36px;
         }
         @media (min-width: $break-md) {
           font-size: 48px;
