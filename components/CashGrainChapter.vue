@@ -2,14 +2,15 @@
   <div class="cash-grain-chapter">
     <div
       class="cash-grain-chapter-title-container"
-      :style="`background-image: url(${chapterPhoto}`"
+      :style="{ backgroundImage: `url(${chapterPhoto}` }"
     >
       <CashGrainChapterTitle
         :chapterLabel="chapterLabel"
         :chapterTitle="chapterTitle"
       />
     </div>
-    <div class="cash-grain-chapter-content-container">
+    <div
+      class="cash-grain-chapter-content-container">
       <div class="cash-grain-chapter-photo-lockup">
         <div class="chapter-story">
           <img class="chapter-image desktop" :src="chapterPhoto" :alt="chapterPhotoLabel">
@@ -68,6 +69,11 @@ export default {
     chapterDescription: {
       type: String,
       required: true,
+    },
+    firstChapter: {
+      type: Boolean,
+      default: false,
+      required: false,
     },
   },
   mounted() {
