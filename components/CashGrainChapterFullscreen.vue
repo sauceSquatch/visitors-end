@@ -1,13 +1,6 @@
 <template>
-  <div
-    class="cash-grain-chapter"
-    :class="firstChapter ? 'first-chapter' : ''"
-  >
-    <div
-      v-if="chapterPhotoMobile"
-      class="cash-grain-chapter-title-container"
-      :style="{ backgroundImage: `url(${chapterPhotoMobile}` }"
-    >
+  <div class="cash-grain-chapter">
+    <div class="cash-grain-chapter-title-container">
       <CashGrainChapterTitle
         :chapterLabel="chapterLabel"
         :chapterTitle="chapterTitle"
@@ -17,13 +10,12 @@
       class="cash-grain-chapter-content-container">
       <div class="cash-grain-chapter-photo-lockup">
         <div class="chapter-story">
-          <img v-if="chapterPhotoMobile" class="chapter-image desktop" :src="chapterPhotoMobile" :alt="chapterPhotoLabel">
-          <p class="cash-grain-chapter-description">
-            {{ chapterDescription }}
-          </p>
+          <p
+            class="cash-grain-chapter-description"
+            v-html="chapterDescription"
+          />
         </div>
         <div class="photo-descrtiption-container">
-          <img src="~/assets/images/cash_grain/dottedArrow-left.svg" alt="arrow pointing at image" class="photo-arrow-left">
           <img src="~/assets/images/cash_grain/dottedArrow-up.svg" alt="arrow pointing at image" class="photo-arrow-up">
           <div class="photo-label">
             {{ chapterPhotoLabel }}
@@ -39,6 +31,25 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="chapter-backgrounds">
+      <div
+        class="chapter-bg-mobile"
+        :style="{ backgroundImage: `url(${chapterPhotoMobile}` }"
+      />
+      <div
+        class="chapter-bg-desktop"
+        :style="{ backgroundImage: `url(${chapterPhotoDesktop}` }"
+      />
+    </div>
+    <div
+      v-if="chapterLink"
+      class="chapter-links"
+    >
+      <CashGrainLink
+        :chapterLink="chapterLink"
+        :chapterLinkCTA="chapterLinkCTA"
+      />
     </div>
   </div>
 </template>
@@ -60,7 +71,7 @@ export default {
     },
     chapterPhotoDesktop: {
       type: String,
-      required: false,
+      required: true,
     },
     chapterPhotoLabel: {
       type: String,
@@ -78,14 +89,12 @@ export default {
       type: String,
       required: true,
     },
-    firstChapter: {
-      type: Boolean,
-      default: false,
+    chapterLink: {
+      type: String,
       required: false,
     },
-    fullscreenBG: {
-      type: Boolean,
-      default: false,
+    chapterLinkCTA: {
+      type: String,
       required: false,
     }
   },
@@ -99,15 +108,13 @@ export default {
 
 
   .cash-grain-chapter {
+    position: relative;
+    height: 100vh;
     .cash-grain-chapter-title-container {
       @include global_container;
-      background-size: cover;
-      height: calc(100vw * 0.65);
       margin-bottom: 20px;
       padding-top: 10px;
       @media (min-width: $break-md) {
-        background-image: none !important;
-        height: auto;
         margin-bottom: 0;
         padding: 0;
       }
@@ -117,20 +124,15 @@ export default {
     }
 
     .cash-grain-chapter-title {
-      margin-top: 40px;
-    }
-
-    .chapter-image {
-      width: 100%;
+      padding-top: 40px;
+      @media (min-width: $break-md) {
+        padding-top: 80px;
+      }
     }
 
     .cash-grain-chapter-photo-lockup {
       display: flex;
       flex-direction: column;
-
-      @media (min-width: $break-md) {
-        flex-direction: row;
-      }
 
       .photo-descrtiption-container {
         padding: 20px 0px;
@@ -139,21 +141,9 @@ export default {
         max-width: 400px;
 
         @media (min-width: $break-md) {
-          padding: 26px 16px;
+          padding: 26px 0px;
           max-width: 30%;
-        }
-      }
-
-      .photo-arrow-up {
-        display: block;
-        @media (min-width: $break-md) {
-          display: none;
-        }
-      }
-      .photo-arrow-left {
-        display: none;
-        @media (min-width: $break-md) {
-          display: block;
+          max-width: 500px;
         }
       }
 
@@ -169,46 +159,31 @@ export default {
       max-width: 600px;
     }
 
-    // first chapter class is active when passed by prop
-    &.first-chapter {
-      .cash-grain-chapter-title-container {
-        height: 700px;
-        @media (min-width: $break-md) {
-          height: auto;
-        }
-      }
-      .cash-grain-chapter-title {
-        margin-top: 420px;
-        @media (min-width: $break-md) {
-          margin-top: 30px;
-        }
-      }
-    }
-
-    .fullscreen-backgrounds {
+    .chapter-backgrounds {
       position: absolute;
       height: 100%;
       width: 100%;
       z-index: -1;
+      top: 0;
+    }
 
-      .fullscreen-bg-mobile {
-        height: 100%;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        @media (min-width: $break-md) {
-          display: none;
-        }
-      }
-      .fullscreen-bg-desktop {
-        height: 100%;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .chapter-bg-mobile {
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @media (min-width: $break-md) {
         display: none;
-        @media (min-width: $break-md) {
-          display: block;
-        }
+      }
+    }
+    .chapter-bg-desktop {
+      height: 100%;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: none;
+      @media (min-width: $break-md) {
+        display: block;
       }
     }
 

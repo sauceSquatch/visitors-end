@@ -67,6 +67,9 @@ export default {
     }
     .profile-container{
       display: flex;
+      @media (min-width: $break-md) {
+        display: none;
+      }
     }
 
     .profile-img {
@@ -91,6 +94,9 @@ export default {
 
     .quote-container {
       padding-top: 40px;
+      @media (min-width: $break-md) {
+        padding-top: 0;
+      }
 
       h4 {
         font-family: 'Stardos Stencil', sans-serif;
