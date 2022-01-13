@@ -27,7 +27,7 @@
         <CashGrainChapter
           chapterLabel="CH/02"
           chapterTitle="MATTERS ON<br>THE PITCH"
-          chapterPhoto="/images/cash_grain/homepage/homepage_02.jpg"
+          chapterPhotoMobile="/images/cash_grain/homepage/homepage_02.jpg"
           chapterPhotoLabel="IMAGE:"
           chapterPhotoTitle="Jorge Rafael Videla"
           chapterPhotoDescription="Argentina players pose during the World Cup 1978 match between Argentina and Peru at Gigante de Arroyito Stadium, Rosario, Argentina, on June 21th 1978. (Photo : Michel Piquemal / Onze / Icon Sport via Getty Images)"
@@ -42,7 +42,7 @@
         <CashGrainChapter
           chapterLabel="CH/03"
           chapterTitle="LET IN FOUR<br>OR ELSE"
-          chapterPhoto="/images/cash_grain/homepage/homepage_03.jpg"
+          chapterPhotoMobile="/images/cash_grain/homepage/homepage_03.jpg"
           chapterPhotoLabel="IMAGE:"
           chapterPhotoTitle="Leopoldo Luque"
           chapterPhotoDescription="of Argentina during the World Cup 1978 match between Argentina and Peru at Gigante de Arroyito Stadium."
@@ -57,7 +57,7 @@
         <CashGrainChapter
           chapterLabel="CH/04"
           chapterTitle="IT TAKES TWO<br>TO CONSPIRE"
-          chapterPhoto="/images/cash_grain/homepage/homepage_04.jpg"
+          chapterPhotoMobile="/images/cash_grain/homepage/homepage_04.jpg"
           chapterPhotoLabel="IMAGE:"
           chapterPhotoTitle="Jorge Rafael Videla (Center)"
           chapterPhotoDescription="Argentine dictator Jorge Rafael Videla attending the World Cup match between Argentina and Peru, 1978."
@@ -72,7 +72,7 @@
         <CashGrainChapter
           chapterLabel="CH/05"
           chapterTitle="THE<br>AFTERMATH"
-          chapterPhoto="/images/cash_grain/homepage/homepage_05.jpg"
+          chapterPhotoMobile="/images/cash_grain/homepage/homepage_05.jpg"
           chapterPhotoLabel="IMAGE:"
           chapterPhotoTitle="Daniel Passarella (Captain of Argentina)"
           chapterPhotoDescription="Daniel Passerella of Argentina with the World Cup 1978 final between Argentina and Holland at Gigante de Arroyito Stadium."
