@@ -17,6 +17,7 @@
     <div class="chapters-container">
       <div class="chapter">
         <CashGrainChapter
+          :firstChapter="true"
           chapterLabel="01/06"
           chapterTitle="ARGENTINA YOU GET<br>TO HOST A WORLD CUP!"
           chapterPhoto="/images/cash_grain/ch01/ch01_01.png"

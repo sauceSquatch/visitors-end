@@ -1,6 +1,10 @@
 <template>
-  <div class="cash-grain-chapter">
+  <div
+    class="cash-grain-chapter"
+    :class="firstChapter ? 'first-chapter' : ''"
+  >
     <div
+      v-if="chapterPhoto"
       class="cash-grain-chapter-title-container"
       :style="{ backgroundImage: `url(${chapterPhoto}` }"
     >
@@ -103,6 +107,10 @@ export default {
       @include global_container;
     }
 
+    .cash-grain-chapter-title {
+      margin-top: 40px;
+    }
+
     .chapter-image {
       width: 100%;
     }
@@ -150,6 +158,16 @@ export default {
       line-height: 25px;
       font-weight: 800;
       max-width: 600px;
+    }
+
+    // first chapter class is active when passed by prop
+    &.first-chapter {
+      .cash-grain-chapter-title-container {
+        height: 700px;
+      }
+      .cash-grain-chapter-title {
+        margin-top: 420px;
+      }
     }
 
   }
