@@ -1,5 +1,16 @@
 <template>
   <div class="cash-grain-link">
+    <a
+      v-if="linkExternal"
+      :href="chapterLink">
+      <div class="arrow-container">
+        <img
+          class="dotted-arrow"
+          src="images/cash_grain/dottedArrow-right.svg"
+        >
+      </div>
+      {{ chapterLinkCTA }}
+    </a>
     <NuxtLink
       v-if="!linkExternal"
       :to="chapterLink"

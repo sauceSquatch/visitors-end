@@ -1,10 +1,22 @@
 <template>
   <div class="cash-grain-chapter">
+    <div
+      v-if="youtubeLink"
+      class="youtube-header">
+        <img src="/images/cash_grain/logo-youtube.svg" target="_blank">
+    </div>
     <div class="cash-grain-chapter-title-container">
       <CashGrainChapterTitle
         :chapterLabel="chapterLabel"
         :chapterTitle="chapterTitle"
       />
+    </div>
+    <div
+      v-if="youtubeLink"
+      class="youtube-link-container">
+      <a :href="youtubeLink" :alt="`Watch ${chapterTitle} on YouTube`">
+        <img src="/images/cash_grain/icon-play-youtube.svg" target="_blank">
+      </a>
     </div>
     <div
       class="cash-grain-chapter-content-container">
@@ -13,6 +25,11 @@
           <p
             class="cash-grain-chapter-description"
             v-html="chapterDescription"
+          />
+          <CashGrainLink
+            v-if="chapterLink"
+            :chapterLink="chapterLink"
+            :chapterLinkCTA="chapterLinkCTA"
           />
         </div>
         <div class="photo-descrtiption-container">
@@ -40,15 +57,6 @@
       <div
         class="chapter-bg-desktop"
         :style="{ backgroundImage: `url(${chapterPhotoDesktop}` }"
-      />
-    </div>
-    <div
-      v-if="chapterLink"
-      class="chapter-links"
-    >
-      <CashGrainLink
-        :chapterLink="chapterLink"
-        :chapterLinkCTA="chapterLinkCTA"
       />
     </div>
   </div>
@@ -96,6 +104,10 @@ export default {
     chapterLinkCTA: {
       type: String,
       required: false,
+    },
+    youtubeLink: {
+      type: String,
+      required: false,
     }
   },
   mounted() {
@@ -109,9 +121,12 @@ export default {
 
   .cash-grain-chapter {
     position: relative;
-    height: 100vh;
+    min-height: 150vh;
+    @media (min-width: $break-md) {
+      height: auto;
+    }
     .cash-grain-chapter-title-container {
-      @include global_container;
+      @include global-container;
       margin-bottom: 20px;
       padding-top: 10px;
       @media (min-width: $break-md) {
@@ -120,7 +135,7 @@ export default {
       }
     }
     .cash-grain-chapter-content-container {
-      @include global_container;
+      @include global-container;
     }
 
     .cash-grain-chapter-title {
@@ -130,9 +145,30 @@ export default {
       }
     }
 
+    .youtube-header {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      img {
+        margin: 20px;
+        width: 85px;
+      }
+    }
+    .youtube-link-container {
+      display: flex;
+      justify-content: center;
+      img {
+        margin: 40px 0 60px;
+      }
+    }
     .cash-grain-chapter-photo-lockup {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
+      @media (min-width: $break-md) {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
 
       .photo-descrtiption-container {
         padding: 20px 0px;
@@ -149,6 +185,9 @@ export default {
 
       .photo-description {
         color: $color--brand-blue-light;
+        @media (min-width: $break-md) {
+          width: 260px;
+        }
       }
     }
 
@@ -157,6 +196,13 @@ export default {
       line-height: 25px;
       font-weight: 800;
       max-width: 600px;
+    }
+
+    .chapter-story{
+      @media (min-width: $break-md) {
+        margin-top: 75px;
+        margin-left: 80px;
+      }
     }
 
     .chapter-backgrounds {
