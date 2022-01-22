@@ -100,7 +100,7 @@ export default {
 
   .cash-grain-chapter {
     .cash-grain-chapter-title-container {
-      @include global_container;
+      @include global-container;
       background-size: cover;
       height: calc(100vw * 0.65);
       margin-bottom: 20px;
@@ -113,7 +113,7 @@ export default {
       }
     }
     .cash-grain-chapter-content-container {
-      @include global_container;
+      @include global-container;
     }
 
     .cash-grain-chapter-title {

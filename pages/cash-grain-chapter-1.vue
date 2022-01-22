@@ -91,18 +91,50 @@
           </div>
         </VueSlickCarousel>
       </div>
-      <div class="chapter">
+      <div class="chapter-fullscreen">
         <CashGrainChapterFullscreen
           chapterLabel="04/06"
           chapterTitle="Operation Condor,<br>The Dirty War"
           chapterPhotoMobile="/images/cash_grain/ch01/ch01_04_tall.jpg"
-          chapterPhotoDesktop="/images/cash_grain/ch01/ch01_04_tall.jpg"
+          chapterPhotoDesktop="/images/cash_grain/ch01/ch01_04_wide.jpg"
           chapterPhotoLabel="IMAGE:"
           chapterPhotoDescription="Collections of photos from families whose children and grandchildren had disappeared. Human rights organizations estimate that over 30,000 people were disappeared."
           chapterDescription="The Junta declared a so-called “Dirty War” against this enemy from within. The full extent of the atrocities committed between 1976 and 1983 is not certain.<br><br>The figure generally quoted, however, is that an estimated 30,000 people were “disappeared,” with many others illegally imprisoned or going into exile."
           chapterLink="/"
           chapterLinkCTA="The Dirty War"
         />
+      </div>
+      <div class="chapter-collection">
+        <div class="cash-grain--collection-heading">
+          Book Recommendations
+          <img class="collection-heading-logo-amazon" src="/images/cash_grain/books/logo_amazon.svg" alt="amazon logo">
+        </div>
+        <div class="chapter-collection-content">
+          <div class="chapter-collection-description">
+            A collection of books that are informative and personal that shed light on the cause and effects on the Juntas Policies
+          </div>
+          <div class="chapter-collection-items">
+            <CashGrainCollectionItem
+              itemImage="/images/cash_grain/books/book_01_dirtywar.jpg"
+              itemDescription="The Ideological Origins of the Dirty War by Federico Finchelstein"
+              itemLink="/"
+              itemLinkCTA="Learn More"
+            />
+            <CashGrainCollectionItem
+              itemImage="/images/cash_grain/books/book_02_betrayed.jpg"
+              itemDescription="The Ideological Origins of the Dirty War by Federico Finchelstein"
+              itemLink="/"
+              itemLinkCTA="Learn More"
+            />
+            <CashGrainCollectionItem
+              itemImage="/images/cash_grain/books/book_03_dirtySecretsDirtyWar.jpg"
+              itemDescription="The Ideological Origins of the Dirty War by Federico Finchelstein"
+              itemLink="/"
+              itemLinkCTA="Learn More"
+            />
+          </div>
+        </div>
+        <div class="chapter-collection-footer" />
       </div>
       <div class="chapter">
         <CashGrainChapter
@@ -115,6 +147,22 @@
         />
       </div>
     </div>
+    <div class="chapter-fullscreen">
+      <CashGrainChapterFullscreen
+        chapterLabel="06/06"
+        chapterTitle="mothers<br>of the<br>plaza de mayo"
+        chapterPhotoMobile="/images/cash_grain/ch01/ch01_06_tall.jpg"
+        chapterPhotoDesktop="/images/cash_grain/ch01/ch01_06_wide.jpg"
+        chapterPhotoLabel="IMAGE:"
+        chapterPhotoDescription="Buenos Aires, Argentina: “Madres de Plaza de Mayo” remain upright on the flooding square in front of the Presidential Palace, claiming their missing sons and daughters, circa 1982 in Buenos Aires."
+        chapterDescription="<p>On April 30, 1977, Azucena Villaflor de De Vincenti and a dozen other mothers walked to the Plaza de Mayo in Argentina’s capital city. These women shared the experience of each having had at least one child who had been taken by the military government.</p>
+                              <p>At great risk to themselves, the mothers made the simple protest of walking to the Plaza De Mayo with pictures of their missing adult children</p>
+                              <p>The mothers created a simple visual sign of their solidarity by each wearing a headscarf with the name of their “disappeared” loved one.</p>"
+        chapterLink="/"
+        chapterLinkCTA="The Dirty War"
+        youtubeLink="http://www.youtube.com"
+      />
+    </div>
   </main>
 </template>
 
@@ -122,8 +170,9 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+import CashGrainCollectionItem from '~/components/CashGrainCollectionItem.vue'
 export default {
-  components: { VueSlickCarousel },
+  components: { VueSlickCarousel, CashGrainCollectionItem },
   data() {
     return {
       settings: {
@@ -177,7 +226,50 @@ export default {
       font-size: 16px;
     }
     .chapter-carousel {
-      @include global_container;
+      @include global-container;
+    }
+    .chapter-collection {
+      background: url("~/assets/images/cash_grain/quote_bg_m.png");
+
+      .cash-grain--collection-heading {
+        background-color: $color--gray-80;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 20px;
+        @media (min-width: $break-lg) {
+          justify-content: center;
+        }
+      }
+      .collection-heading-logo-amazon {
+        margin: 3px 10px 0;
+      }
+      .chapter-collection-footer {
+        background-color: $color--gray-80;
+        height: 20px;
+      }
+      .chapter-collection-content {
+        @include global-container;
+
+        .chapter-collection-description {
+          margin: 35px 0;
+          max-width: 380px;
+          line-height: 1.8em;
+          @media (min-width: $break-lg) {
+            display: none;
+          }
+        }
+
+        .chapter-collection-items {
+          @media (min-width: $break-lg) {
+            display: flex;
+            justify-content: center;
+            .cash-grain-collection-item {
+              margin-left: 20px;
+              margin-right: 20px;
+            }
+          }
+        }
+      }
     }
   }
 </style>

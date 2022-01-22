@@ -112,7 +112,10 @@ export default {
     padding: 25px 0 30px;
     @include global-margin-bottom;
   }
+  .chapter-fullscreen {
+    margin: 0;
+  }
   .chapter-links {
-    @include global_container;
+    @include global-container;
   }
 </style>

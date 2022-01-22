@@ -33,6 +33,7 @@ export default {
         font-size: 18px;
         line-height: 1;
         margin: 0;
+        text-transform: uppercase;
         @media (min-width: $break-sm) {
           font-size: 36px;
         }

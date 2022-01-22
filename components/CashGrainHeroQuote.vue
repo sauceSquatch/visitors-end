@@ -110,6 +110,7 @@ export default {
         font-size: 16px;
         text-transform: uppercase;
         color: $color--brand-blue-light;
+        padding-bottom: 30px;
       }
       .highlight {
         color: $color--brand-blue-light;
