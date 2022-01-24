@@ -12,16 +12,18 @@
         <CashGrainChapter
           chapterLabel="CH/01"
           chapterTitle="From Host<br>to Junta"
-          chapterPhoto="/images/cash_grain/homepage/homepage_01.jpg"
+          chapterPhotoMobile="/images/cash_grain/homepage/homepage_01.jpg"
           chapterPhotoLabel="IMAGE:"
           chapterPhotoTitle="Jorge Rafael Videla"
           chapterPhotoDescription="Argentina players pose during the World Cup 1978 match between Argentina and Peru at Gigante de Arroyito Stadium, Rosario, Argentina, on June 21th 1978. (Photo : Michel Piquemal / Onze / Icon Sport via Getty Images)"
           chapterDescription="The Argentine national team was disparate group over-seas players and local legends. A chain-smoking, left-wing intellectual is picked to manage the team."
         />
-        <CashGrainLink
-          chapterLink="cash-grain-chapter-1"
-          chapterLinkCTA="LEARN MORE"
-        />
+        <div class="chapter-links">
+          <CashGrainLink
+            chapterLink="cash-grain-chapter-1"
+            chapterLinkCTA="LEARN MORE"
+          />
+        </div>
       </div>
       <div class="chapter">
         <CashGrainChapter
@@ -33,10 +35,12 @@
           chapterPhotoDescription="Argentina players pose during the World Cup 1978 match between Argentina and Peru at Gigante de Arroyito Stadium, Rosario, Argentina, on June 21th 1978. (Photo : Michel Piquemal / Onze / Icon Sport via Getty Images)"
           chapterDescription="The Argentine national team was disparate group over-seas players and local legends. A chain-smoking, left-wing intellectual is picked to manage the team."
         />
-        <CashGrainLink
-          chapterLink="/"
-          chapterLinkCTA="LEARN MORE"
-        />
+        <div class="chapter-links">
+          <CashGrainLink
+            chapterLink="/"
+            chapterLinkCTA="LEARN MORE"
+          />
+        </div>
       </div>
       <div class="chapter">
         <CashGrainChapter
@@ -48,10 +52,12 @@
           chapterPhotoDescription="of Argentina during the World Cup 1978 match between Argentina and Peru at Gigante de Arroyito Stadium."
           chapterDescription="The players from the Argentine and Peruvian teams feel the pressure from outside the locker room and from within."
         />
-        <CashGrainLink
-          chapterLink="/"
-          chapterLinkCTA="LEARN MORE"
-        />
+        <div class="chapter-links">
+          <CashGrainLink
+            chapterLink="/"
+            chapterLinkCTA="LEARN MORE"
+          />
+        </div>
       </div>
       <div class="chapter">
         <CashGrainChapter
@@ -63,10 +69,12 @@
           chapterPhotoDescription="Argentine dictator Jorge Rafael Videla attending the World Cup match between Argentina and Peru, 1978."
           chapterDescription="Behind the scenes, the Argentine junta and Peruvian dictatorship negotiate the price and terms for the Argentina team to qualify for the final."
         />
-        <CashGrainLink
-          chapterLink="/"
-          chapterLinkCTA="LEARN MORE"
-        />
+        <div class="chapter-links">
+          <CashGrainLink
+            chapterLink="/"
+            chapterLinkCTA="LEARN MORE"
+          />
+        </div>
       </div>
       <div class="chapter">
         <CashGrainChapter
@@ -78,10 +86,12 @@
           chapterPhotoDescription="Daniel Passerella of Argentina with the World Cup 1978 final between Argentina and Holland at Gigante de Arroyito Stadium."
           chapterDescription="The Junta is basking in the glory of the national football team’s victory. However, ordinary Argentine citizens are refusing to remain silent at the regime’s atrocities."
         />
-        <CashGrainLink
-          chapterLink="/"
-          chapterLinkCTA="LEARN MORE"
-        />
+        <div class="chapter-links">
+          <CashGrainLink
+            chapterLink="/"
+            chapterLinkCTA="LEARN MORE"
+          />
+        </div>
       </div>
     </div>
   </main>
