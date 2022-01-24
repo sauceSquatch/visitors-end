@@ -159,7 +159,7 @@
                               <p>At great risk to themselves, the mothers made the simple protest of walking to the Plaza De Mayo with pictures of their missing adult children</p>
                               <p>The mothers created a simple visual sign of their solidarity by each wearing a headscarf with the name of their “disappeared” loved one.</p>"
         chapterLink="/"
-        chapterLinkCTA="The Dirty War"
+        chapterLinkCTA="Learn More About The Madres de Plaza de mayo"
         youtubeLink="http://www.youtube.com"
       />
     </div>
