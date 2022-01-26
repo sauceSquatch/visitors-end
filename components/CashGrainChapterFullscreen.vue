@@ -2,8 +2,9 @@
   <div class="cash-grain-chapter">
     <div
       v-if="youtubeLink"
-      class="youtube-header">
-        <img src="/images/cash_grain/logo-youtube.svg" target="_blank">
+      class="youtube-header"
+    >
+      <img src="/images/cash_grain/logo-youtube.svg" target="_blank">
     </div>
     <div class="cash-grain-chapter-title-container">
       <CashGrainChapterTitle
@@ -13,13 +14,15 @@
     </div>
     <div
       v-if="youtubeLink"
-      class="youtube-link-container">
+      class="youtube-link-container"
+    >
       <a :href="youtubeLink" :alt="`Watch ${chapterTitle} on YouTube`">
         <img src="/images/cash_grain/icon-play-youtube.svg" target="_blank">
       </a>
     </div>
     <div
-      class="cash-grain-chapter-content-container">
+      class="cash-grain-chapter-content-container"
+    >
       <div class="cash-grain-chapter-photo-lockup">
         <div class="chapter-story">
           <p
@@ -108,7 +111,7 @@ export default {
     youtubeLink: {
       type: String,
       required: false,
-    }
+    },
   },
   mounted() {
     //
