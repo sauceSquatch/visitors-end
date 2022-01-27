@@ -25,7 +25,7 @@
     >
       <div class="cash-grain-chapter-photo-lockup">
         <div class="chapter-story">
-          <p
+          <div
             class="cash-grain-chapter-description"
             v-html="chapterDescription"
           />
@@ -54,10 +54,12 @@
     </div>
     <div class="chapter-backgrounds">
       <div
+        v-if="chapterPhotoMobile"
         class="chapter-bg-mobile"
         :style="{ backgroundImage: `url(${chapterPhotoMobile}` }"
       />
       <div
+        v-if="chapterPhotoDesktop"
         class="chapter-bg-desktop"
         :style="{ backgroundImage: `url(${chapterPhotoDesktop}` }"
       />

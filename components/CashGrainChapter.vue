@@ -14,13 +14,16 @@
       />
     </div>
     <div
-      class="cash-grain-chapter-content-container">
+      class="cash-grain-chapter-content-container"
+    >
       <div class="cash-grain-chapter-photo-lockup">
         <div class="chapter-story">
           <img v-if="chapterPhotoMobile" class="chapter-image desktop" :src="chapterPhotoMobile" :alt="chapterPhotoLabel">
-          <p class="cash-grain-chapter-description">
-            {{ chapterDescription }}
-          </p>
+          <p
+            v-if="chapterDescription"
+            class="cash-grain-chapter-description"
+            v-html="chapterDescription"
+          />
         </div>
         <div class="photo-descrtiption-container">
           <img src="~/assets/images/cash_grain/dottedArrow-left.svg" alt="arrow pointing at image" class="photo-arrow-left">
