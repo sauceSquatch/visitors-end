@@ -163,6 +163,12 @@
         />
       </div>
     </div>
+    <CashGrainChapterFooter
+      nextChapterCTA="CHAPTER TWO: <br class='mobile'>MATTERS ON THE PITCH"
+      nextChapterLink="/"
+      footerImageMobile="/images/cash_grain/ch01/ch01_footer_mobile.jpg"
+      footerImageDesktop="/images/cash_grain/ch01/ch01_footer_desktop.jpg"
+    />
   </main>
 </template>
 
@@ -171,10 +177,12 @@ import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import CashGrainCollectionItem from '~/components/CashGrainCollectionItem.vue'
+import CashGrainChapterFooter from '~/components/CashGrainChapterFooter.vue'
 export default {
   components: {
     VueSlickCarousel,
     CashGrainCollectionItem,
+    CashGrainChapterFooter,
   },
   data() {
     return {
