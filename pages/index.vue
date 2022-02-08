@@ -75,7 +75,7 @@
         />
         <div class="chapter-links">
           <CashGrainLink
-            chapterLink="/"
+            chapterLink="cash-grain-chapter-3"
             chapterLinkCTA="LEARN MORE"
           />
         </div>
