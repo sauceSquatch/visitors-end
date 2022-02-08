@@ -2,11 +2,12 @@
   <div class="cash-grain-link">
     <a
       v-if="linkExternal"
-      :href="chapterLink">
+      :href="chapterLink"
+    >
       <div class="arrow-container">
         <img
           class="dotted-arrow"
-          src="images/cash_grain/dottedArrow-right.svg"
+          src="/images/cash_grain/dottedArrow-right.svg"
         >
       </div>
       {{ chapterLinkCTA }}
@@ -18,7 +19,7 @@
       <div class="arrow-container">
         <img
           class="dotted-arrow"
-          src="images/cash_grain/dottedArrow-right.svg"
+          src="/images/cash_grain/dottedArrow-right.svg"
         >
       </div>
       {{ chapterLinkCTA }}

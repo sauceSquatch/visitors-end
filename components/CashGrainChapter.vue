@@ -14,13 +14,16 @@
       />
     </div>
     <div
-      class="cash-grain-chapter-content-container">
+      class="cash-grain-chapter-content-container"
+    >
       <div class="cash-grain-chapter-photo-lockup">
         <div class="chapter-story">
           <img v-if="chapterPhotoMobile" class="chapter-image desktop" :src="chapterPhotoMobile" :alt="chapterPhotoLabel">
-          <p class="cash-grain-chapter-description">
-            {{ chapterDescription }}
-          </p>
+          <p
+            v-if="chapterDescription"
+            class="cash-grain-chapter-description"
+            v-html="chapterDescription"
+          />
         </div>
         <div class="photo-descrtiption-container">
           <img src="~/assets/images/cash_grain/dottedArrow-left.svg" alt="arrow pointing at image" class="photo-arrow-left">
@@ -34,9 +37,11 @@
           >
             {{ chapterPhotoTitle }}
           </div>
-          <div class="photo-description">
-            {{ chapterPhotoDescription }}
-          </div>
+          <div
+            v-if="chapterPhotoDescription"
+            class="photo-description"
+            v-html="chapterPhotoDescription"
+          />
         </div>
       </div>
     </div>
@@ -83,11 +88,6 @@ export default {
       default: false,
       required: false,
     },
-    fullscreenBG: {
-      type: Boolean,
-      default: false,
-      required: false,
-    }
   },
   mounted() {
     //
@@ -159,6 +159,10 @@ export default {
 
       .photo-description {
         color: $color--brand-blue-light;
+        .source-credit {
+          text-transform: uppercase;
+          color: $color--brand-white;
+        }
       }
     }
 
@@ -172,42 +176,15 @@ export default {
     // first chapter class is active when passed by prop
     &.first-chapter {
       .cash-grain-chapter-title-container {
-        height: 700px;
+        height: 460px;
         @media (min-width: $break-md) {
           height: auto;
         }
       }
       .cash-grain-chapter-title {
-        margin-top: 420px;
+        margin-top: 310px;
         @media (min-width: $break-md) {
           margin-top: 30px;
-        }
-      }
-    }
-
-    .fullscreen-backgrounds {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      z-index: -1;
-
-      .fullscreen-bg-mobile {
-        height: 100%;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        @media (min-width: $break-md) {
-          display: none;
-        }
-      }
-      .fullscreen-bg-desktop {
-        height: 100%;
-        width: 100%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: none;
-        @media (min-width: $break-md) {
-          display: block;
         }
       }
     }

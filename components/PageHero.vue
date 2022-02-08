@@ -16,11 +16,11 @@
     <div class="page-hero-backgrounds">
       <div
         class="hero-bg-mobile"
-        :style="`background-image: url(images/cash_grain/hero_images/${heroImage}_m.jpg)`"
+        :style="`background-image: url(/images/cash_grain/hero_images/${heroImage}_m.jpg)`"
       />
       <div
         class="hero-bg-desktop"
-        :style="`background-image: url(images/cash_grain/hero_images/${heroImage}.jpg)`"
+        :style="`background-image: url(/images/cash_grain/hero_images/${heroImage}.jpg)`"
       />
     </div>
   </div>

@@ -11,7 +11,7 @@
       profilePic="/images/cash_grain/ch01/ch01_quote_pic.png"
       profileName="Emilio Eduardo Massera"
       profileBio="(19 October 1925 – 8 November 2010) Argentine Naval military officer, and a leading participant in the Argentine coup d’état of 1976."
-      quote="“Holding the tournament will show the world that <span class='highlight'>Argentina is a trustworthy country</span>, capable of carrying out huge projects; and will help push back against the criticism that is raining on us from around the world”"
+      quote="Holding the tournament will show the world that <span class='highlight'>Argentina is a trustworthy country</span>, capable of carrying out huge projects; and will help push back against the criticism that is raining on us from around the world"
       quoteName="Admiral Emilio Massera"
     />
     <div class="chapters-container">
@@ -99,7 +99,7 @@
           chapterPhotoDesktop="/images/cash_grain/ch01/ch01_04_wide.jpg"
           chapterPhotoLabel="IMAGE:"
           chapterPhotoDescription="Collections of photos from families whose children and grandchildren had disappeared. Human rights organizations estimate that over 30,000 people were disappeared."
-          chapterDescription="The Junta declared a so-called “Dirty War” against this enemy from within. The full extent of the atrocities committed between 1976 and 1983 is not certain.<br><br>The figure generally quoted, however, is that an estimated 30,000 people were “disappeared,” with many others illegally imprisoned or going into exile."
+          chapterDescription="The Junta declared a so-called Dirty War against this enemy from within. The full extent of the atrocities committed between 1976 and 1983 is not certain. The figure generally quoted, however, is that an estimated 30,000 people were “disappeared,” with many others illegally imprisoned or going into exile."
           chapterLink="/"
           chapterLinkCTA="The Dirty War"
         />
@@ -146,23 +146,29 @@
           chapterDescription="In late 1977, a group of French journalists and intellectuals formed the Organizing Committee for the Boycott of the Argentina World Cup, known for its French acronym, COBA.<br><br>They planned an organized campaign designed to persuade the French national team, led by the curly-haired goal scorer Michel Platini, to skip the tournament altogether."
         />
       </div>
+      <div class="chapter-fullscreen">
+        <CashGrainChapterFullscreen
+          chapterLabel="06/06"
+          chapterTitle="mothers<br>of the<br>plaza de mayo"
+          chapterPhotoMobile="/images/cash_grain/ch01/ch01_06_tall.jpg"
+          chapterPhotoDesktop="/images/cash_grain/ch01/ch01_06_wide.jpg"
+          chapterPhotoLabel="IMAGE:"
+          chapterPhotoDescription="Buenos Aires, Argentina: “Madres de Plaza de Mayo” remain upright on the flooding square in front of the Presidential Palace, claiming their missing sons and daughters, circa 1982 in Buenos Aires."
+          chapterDescription="On April 30, 1977, Azucena Villaflor de De Vincenti and a dozen other mothers walked to the Plaza de Mayo in Argentina’s capital city. These women shared the experience of each having had at least one child who had been taken by the military government.
+                              At great risk to themselves, the mothers made the simple protest of walking to the Plaza De Mayo with pictures of their missing adult children
+                              The mothers created a simple visual sign of their solidarity by each wearing a headscarf with the name of their “disappeared” loved one."
+          chapterLink="/"
+          chapterLinkCTA="Learn More About The Madres de Plaza de mayo"
+          youtubeLink="http://www.youtube.com"
+        />
+      </div>
     </div>
-    <div class="chapter-fullscreen">
-      <CashGrainChapterFullscreen
-        chapterLabel="06/06"
-        chapterTitle="mothers<br>of the<br>plaza de mayo"
-        chapterPhotoMobile="/images/cash_grain/ch01/ch01_06_tall.jpg"
-        chapterPhotoDesktop="/images/cash_grain/ch01/ch01_06_wide.jpg"
-        chapterPhotoLabel="IMAGE:"
-        chapterPhotoDescription="Buenos Aires, Argentina: “Madres de Plaza de Mayo” remain upright on the flooding square in front of the Presidential Palace, claiming their missing sons and daughters, circa 1982 in Buenos Aires."
-        chapterDescription="<p>On April 30, 1977, Azucena Villaflor de De Vincenti and a dozen other mothers walked to the Plaza de Mayo in Argentina’s capital city. These women shared the experience of each having had at least one child who had been taken by the military government.</p>
-                              <p>At great risk to themselves, the mothers made the simple protest of walking to the Plaza De Mayo with pictures of their missing adult children</p>
-                              <p>The mothers created a simple visual sign of their solidarity by each wearing a headscarf with the name of their “disappeared” loved one.</p>"
-        chapterLink="/"
-        chapterLinkCTA="Learn More About The Madres de Plaza de mayo"
-        youtubeLink="http://www.youtube.com"
-      />
-    </div>
+    <CashGrainChapterFooter
+      nextChapterCTA="CHAPTER TWO: <br class='mobile'>MATTERS ON THE PITCH"
+      nextChapterLink="/"
+      footerImageMobile="/images/cash_grain/ch01/ch01_footer_mobile.jpg"
+      footerImageDesktop="/images/cash_grain/ch01/ch01_footer_desktop.jpg"
+    />
   </main>
 </template>
 
@@ -171,8 +177,13 @@ import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 import CashGrainCollectionItem from '~/components/CashGrainCollectionItem.vue'
+import CashGrainChapterFooter from '~/components/CashGrainChapterFooter.vue'
 export default {
-  components: { VueSlickCarousel, CashGrainCollectionItem },
+  components: {
+    VueSlickCarousel,
+    CashGrainCollectionItem,
+    CashGrainChapterFooter,
+  },
   data() {
     return {
       settings: {
@@ -227,6 +238,7 @@ export default {
     }
     .chapter-carousel {
       @include global-container;
+      margin-bottom: 60px;
     }
     .chapter-collection {
       background: url("~/assets/images/cash_grain/quote_bg_m.png");

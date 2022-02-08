@@ -51,6 +51,25 @@
   }
 }
 
+.cash-grain--footer {
+  font-size: 16px;
+  line-height: 1;
+  font-family: 'Stardos Stencil', sans-serif;
+  margin: 0;
+  @media (min-width: $break-sm) {
+    font-size: 18px;
+  }
+  @media (min-width: $break-md) {
+    font-size: 24px;
+  }
+  @media (min-width: $break-lg) {
+    font-size: 36px;
+  }
+  @media (min-width: $break-xl) {
+    font-size: 42px;
+  }
+}
+
 // .global--heading-two {
 //   font-size: 30px;
 //   letter-spacing: -.01em;
