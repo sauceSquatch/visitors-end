@@ -126,7 +126,7 @@ export default {
 
   .cash-grain-chapter {
     position: relative;
-    min-height: 130vh;
+    min-height: 100vh;
     @media (min-width: $break-md) {
       height: auto;
     }

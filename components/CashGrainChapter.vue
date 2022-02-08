@@ -37,9 +37,11 @@
           >
             {{ chapterPhotoTitle }}
           </div>
-          <div class="photo-description">
-            {{ chapterPhotoDescription }}
-          </div>
+          <div
+            v-if="chapterPhotoDescription"
+            class="photo-description"
+            v-html="chapterPhotoDescription"
+          />
         </div>
       </div>
     </div>
@@ -157,6 +159,10 @@ export default {
 
       .photo-description {
         color: $color--brand-blue-light;
+        .source-credit {
+          text-transform: uppercase;
+          color: $color--brand-white;
+        }
       }
     }
 

@@ -11,7 +11,7 @@
       profilePic="/images/cash_grain/ch01/ch01_quote_pic.png"
       profileName="Emilio Eduardo Massera"
       profileBio="(19 October 1925 – 8 November 2010) Argentine Naval military officer, and a leading participant in the Argentine coup d’état of 1976."
-      quote="“Holding the tournament will show the world that <span class='highlight'>Argentina is a trustworthy country</span>, capable of carrying out huge projects; and will help push back against the criticism that is raining on us from around the world”"
+      quote="Holding the tournament will show the world that <span class='highlight'>Argentina is a trustworthy country</span>, capable of carrying out huge projects; and will help push back against the criticism that is raining on us from around the world"
       quoteName="Admiral Emilio Massera"
     />
     <div class="chapters-container">
@@ -238,6 +238,7 @@ export default {
     }
     .chapter-carousel {
       @include global-container;
+      margin-bottom: 60px;
     }
     .chapter-collection {
       background: url("~/assets/images/cash_grain/quote_bg_m.png");

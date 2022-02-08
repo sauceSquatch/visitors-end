@@ -2,7 +2,8 @@
   <div class="cash-grain-link">
     <a
       v-if="linkExternal"
-      :href="chapterLink">
+      :href="chapterLink"
+    >
       <div class="arrow-container">
         <img
           class="dotted-arrow"

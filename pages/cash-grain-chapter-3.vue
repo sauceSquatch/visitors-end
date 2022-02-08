@@ -1,29 +1,45 @@
 <template>
   <main>
     <PageHero
-      chapterLabel="chapter 2"
-      heroHeadline="MATTERS<br>ON THE<br>PITCH"
-      heroImage="chapter2_hero"
-      heroParagraph="When the tournament kicked off in June 1978, Argentina was in the thick of its bloody military dictatorship. However, there were players and coaches who just wanted to play the game and represent the country they loved."
+      chapterLabel="chapter 3"
+      heroHeadline="SCORE<br>FOUR<br>OR ELSE"
+      heroImage="chapter3_hero"
+      heroParagraph="With a lackluster performance in the second group stage, Argentina needed a massive result against the in-form Peru."
     />
-    <PageBreadcrumb pageName="CHAPTER 1, FROM HOST TO JUNTA: 1-6" />
+    <PageBreadcrumb pageName="SCORE FOUR OR ELSE: CHAPTER THREE: 1-4" />
     <CashGrainHeroQuote
-      profilePic="/images/cash_grain/ch02/ch02_quote_pic.png"
+      profilePic="/images/cash_grain/ch03/ch03_quote_pic.png"
       profileName="ESMA OF THE NAVY"
       profileBio="The Higher School of Mechanics of the Navy. It was used as an illegal, secret detention center during the Dirty War of military dictatorship."
-      quote="It was a cold but sunny day, and as the doves flapped up and out of the stadium, they could be seen from the infamous Navy Superior Mechanics School, or ESMA, a cluster of buildings less than <span class='highlight'>a mile away where thousands of people were being tortured.</span>"
-      quoteName="KEN BESINGER, JOURNALIST"
+      quote="If a team could kick it’s way to a World Cup then I would pick just such a side, but it’s no longer possible. Such methods are obsolete. The emphasis must be on skill."
+      quoteName="Cesar Menotti, Argentina Manager"
     />
     <div class="chapters-container">
       <div class="chapter">
         <CashGrainChapter
           :firstChapter="true"
           chapterLabel="01/01"
-          chapterTitle="THE MANAGER<br>“EL FLACO”"
-          chapterPhotoMobile="/images/cash_grain/ch02/ch02_01_tall.png"
-          chapterPhotoLabel="NOTE:"
-          chapterPhotoDescription="Cesar Menotti (Coach)<br>with Daniel Passarella (Captain)<br><span class='source-credit'>source getty images</span>"
-          chapterDescription="The Argentinian manager was a tall, skinny, chain-smoking 39-year-old, Cesar Luis Menotti. In the tense political climate, it seemed very peculiar that a left-wing intellectual, a former Communist, would be selected to manage the national team."
+          chapterTitle="GROUP B STAGE<br>“SEMI-FINALS”"
+          chapterPhotoMobile="/images/cash_grain/ch03/ch03_01_tall.png"
+          chapterPhotoLabel="IMAGE:"
+          chapterPhotoDescription="Mario Kempes<br>Argentine Striker<br><span class='source-credit'>source getty images</span>"
+          chapterDescription="In the ʼ78 World Cup, there was a second group stage where the winner of the group would go on to the World Cup Final. Argentina staggered into the group and their main rival was Brazil, with Peru and Poland being the other teams.<br><br>The two teams had already played out a goalless draw. Was it just a happy accident that the hosts knew exactly what they needed to do following Brazil’s 3–1 win against Poland? With a 4–0 win against Peru, they were in the final."
+        />
+        <div class="chapter-links">
+          <CashGrainLink
+            chapterLink="/"
+            chapterLinkCTA="1978 FIFA World Cup Group B"
+          />
+        </div>
+      </div>
+      <div class="chapter">
+        <CashGrainChapter
+          chapterLabel="01/02"
+          chapterTitle="“EL GORDO”<br>THE BRIBER"
+          chapterPhotoMobile="/images/cash_grain/ch03/03_02.png"
+          chapterPhotoLabel="IMAGE:"
+          chapterPhotoDescription="Oscar Ortiz of Argentina during the World Cup 1978 match between Argentina and Italy at Monumental Stadium, Buenos Aires, Argentina, on June 10, 1978."
+          chapterDescription="In the first group stage (Group A), Argentina was placed with Italy, France and Hungary.<br><br>La Albiceleste, the host nation, got off to a sluggish start with a close 2–1 victory over Hungary in their opening game. Argentines had a more attacking (2–1) victory over the French, but with a dubious awarded penalty for hand ball. They were up against the solid Italian team and lost that game convincingly 1–0 to the Azurri.<br><br>Italy won the group comprehensively. Argentina, with the tension in the country, came in a lackluster second. Both teams automatically qualified for the second group stage."
         />
         <div class="chapter-links">
           <CashGrainLink
@@ -35,7 +51,7 @@
       <div class="chapter chapter-carousel">
         <CashGrainChapterTitle
           chapterLabel="01/02"
-          chapterTitle="KEY ARGENTINE PLAYERS"
+          chapterTitle="“EL GORDO”<br>THE BRIBER"
         />
         <VueSlickCarousel v-bind="settings">
           <div>
